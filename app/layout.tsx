@@ -61,6 +61,15 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         {styles && <style>{styles}</style>}
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+
+        {/* ✅ Favicon Setup */}
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+        {/* Optional: dark/light theme favicons */}
+        {/* 
+        <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+        */}
+
         <ApplyThemeScript />
       </head>
       <body className="overflow-x-hidden">
